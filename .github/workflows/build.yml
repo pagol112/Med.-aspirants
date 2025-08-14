@@ -1,35 +1,22 @@
-name: Squad APK Build
-
-on:
-  push:
-    branches:
-      - main
-
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    container:
+      image: kivy/buildozer
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-
-    - name: Install dependencies
-      run: |
-        pip install buildozer
-        sudo apt update
-        sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+    - name: Init Buildozer
+      run: buildozer init || echo "Already initialized"
 
     - name: Build APK
-      run: |
-        buildozer android debug
+      run: buildozer android debug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: Squad-APK
-        path: '**/*.apk'
+        path: bin/*.apk
