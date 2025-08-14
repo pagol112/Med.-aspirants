@@ -1,1 +1,2 @@
-# Med.-aspirants
+## License  
+This project is licensed under the MIT License.# Med.-aspirants
