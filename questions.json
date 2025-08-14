@@ -1,1 +1,13 @@
+[
+  {
+    "question": "What is the powerhouse of the cell?",
+    "options": ["Nucleus", "Mitochondria", "Ribosome", "Golgi body"],
+    "answer": "Mitochondria"
+  },
+  {
+    "question": "Which vitamin is synthesized in skin by sunlight?",
+    "options": ["Vitamin A", "Vitamin B12", "Vitamin C", "Vitamin D"],
+    "answer": "Vitamin D"
+  }
+]
 
